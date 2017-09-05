@@ -12,13 +12,18 @@ MAKEFILE_INC=makefile.inc
 -include $(MAKEFILE_INC)
 
 LIBNAME=libfaiss
+PYTHON_SITE_PACKAGE=`python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"`
+
+openblas:
+	yum install openblas-devel
 
 all: .env_ok $(LIBNAME).a tests/demo_ivfpq_indexing
 
 py: _swigfaiss.so
 
-
-
+py-install: openblas all py
+	cp -f -t $(PYTHON_SITE_PACKAGE) faiss.py swigfaiss.py _swigfaiss.so
+	`python -c "import faiss"`
 #############################
 # Various
 
