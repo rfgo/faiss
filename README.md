@@ -14,7 +14,7 @@ The GPU implementation can accept input from either CPU or GPU memory. On a serv
 
 ## Building 
 
-The library is mostly implemented in C++, with optional GPU support provided via CUDA, and an optional Python interface. The CPU version requires a BLAS library. It compiles with a Makefile and can be packaged in a docker image. See [INSTALL](INSTALL) for details.
+The library is mostly implemented in C++, with optional GPU support provided via CUDA, and an optional Python interface. The CPU version requires a BLAS library. It compiles with a Makefile and can be packaged in a docker image. See [INSTALL.md](INSTALL.md) for details.
 
 ## How Faiss works
 
@@ -43,6 +43,18 @@ The main authors of Faiss are:
 - [Matthijs Douze](https://github.com/mdouze) implemented most of the CPU Faiss
 - [Jeff Johnson](https://github.com/wickedfoo) implemented all of the GPU Faiss
 
+## Reference
+
+Reference to cite when you use Faiss in a research paper:
+
+```
+@article{JDH17,
+  title={Billion-scale similarity search with GPUs},
+  author={Johnson, Jeff and Douze, Matthijs and J{\'e}gou, Herv{\'e}},
+  journal={arXiv preprint arXiv:1702.08734},
+  year={2017}
+}
+```
 
 ## Join the Faiss community
 
